@@ -1,0 +1,30 @@
+/* Navbar style code here */
+.menu {
+  overflow: hidden;
+}
+.navbar-brand {
+  text-transform: uppercase;
+}
+.navbar-brand img {
+  width: 100px;
+  border-radius: 50%;
+}
+.nav-link {
+  margin: 0;
+  padding: 20px !important;
+  text-transform: uppercase;
+}
+
+/* Login page */
+.login form {
+  border: 1px solid blue;
+}
+.login input,
+.login button {
+  margin: 20px;
+  padding: 10px;
+}
+
+.navbarBottomMargin {
+  margin-bottom: 7rem;
+}
