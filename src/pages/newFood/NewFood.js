@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import BookList from "../components/BookList";
-import "./NewBooks.css";
+import BookList from "../../components/newFoodList/FoodList";
+import "./NewFood.css";
 
 const NewBooks = () => {
   const [books, setBooks] = useState([]);
@@ -36,8 +36,8 @@ const NewBooks = () => {
           <BookList books={books} />
         </section>
       ) : (
-        <p className="books">
-          You do not have any book in your own library yet!
+        <p className="food">
+          You do not have any food item in your new food list yet!
         </p>
       )}
     </>

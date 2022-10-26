@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AddNewBook from "../components/AddNewBook";
+import AddNewBook from "../../components/newFoodList/AddNewFood";
 
 const AddBook = () => {
   const [books, setBooks] = useState([]);

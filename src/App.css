@@ -1,6 +1,24 @@
+/* Common CSS */
 body {
-  margin: auto;
+  font-size: 100%;
+  margin: 0 auto;
 }
+h1 {
+  font-family: "Viga", sans-serif;
+  font-weight: normal;
+}
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold !important;
+  font-size: 1.55em !important;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+}
+
 main {
   width: 85%;
   height: 100%;

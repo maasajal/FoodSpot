@@ -3,12 +3,15 @@ import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import About from "./pages/About";
+// Customs components here
+import Header from "./components/header/Header";
 import Footer from "./components/Footer";
-import AddBook from "./pages/AddBook";
-import NewBooks from "./pages/NewBooks";
+// Several pages import here
+import Home from "./pages/home/Home";
+import TodayMeal from "./pages/today'sMeal/TodayMeal";
+import NewBooks from "./pages/newFood/NewFood";
+import AddBook from "./pages/addFood/AddFood";
+import About from "./pages/about/About";
 
 const App = () => {
   return (
@@ -16,6 +19,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route path="/today-meal" element={<TodayMeal />} />
         <Route path="/new-food" element={<NewBooks />} />
         {/* <Route path="login" element={<Login />} />
         <Route path="admin" element={<RequireAuth><AdminNews /></RequireAuth>} /> */}
