@@ -1,6 +1,6 @@
-# Book Circle
+# Food Spot
 
-A digital books library
+Food Spot for food lover in Tampere!, Search your favourite food items, randomly generate your meal, Find new food items
 
 ## Available Scripts
 
