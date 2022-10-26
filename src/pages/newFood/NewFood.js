@@ -1,39 +1,37 @@
 import { useState, useEffect } from "react";
-import BookList from "../../components/newFoodList/FoodList";
+import FoodList from "../../components/newFoodList/FoodList";
 import "./NewFood.css";
+const firebaseApi = "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/food-items.json";
 
-const NewBooks = () => {
-  const [books, setBooks] = useState([]);
-  const firebaseUrl =
-    "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/foods.json";
-  const fetchBooks = async () => {
-    const response = await fetch({ firebaseUrl });
+const NewFood = () => {
+  const [newFood, setFood] = useState([]);
+  const fetchFood = async () => {
+    const response = await fetch(firebaseApi);
     const data = await response.json();
 
-    const fetchedBook = [];
+    const fetchedFood = [];
 
     for (const key in data) {
-      fetchedBook.push({
-        id: key,
-        title: data[key].title,
-        author: data[key].author,
-        year: data[key].year,
-        isbn: data[key].isbn,
-        price: data[key].price,
+      fetchedFood.push({
+        idMeal: key,
+        strMeal: data[key].strMeal,
+        strCategory: data[key].strCategory,
+        strMealThumb: data[key].strMealThumb,
+        strIngredient: data[key].strIngredient,
       });
     }
-    setBooks(fetchedBook);
+    setFood(fetchedFood);
   };
 
   useEffect(() => {
-    fetchBooks();
-  }, [fetchBooks]);
+    fetchFood();
+  }, [fetchFood]);
 
   return (
     <>
-      {books.length > 0 ? (
+      {newFood.length > 0 ? (
         <section>
-          <BookList books={books} />
+          <FoodList newFood={newFood} />
         </section>
       ) : (
         <p className="food">
@@ -44,4 +42,4 @@ const NewBooks = () => {
   );
 };
 
-export default NewBooks;
+export default NewFood;

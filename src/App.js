@@ -9,8 +9,8 @@ import Footer from "./components/Footer";
 // Several pages import here
 import Home from "./pages/home/Home";
 import TodayMeal from "./pages/today'sMeal/TodayMeal";
-import NewBooks from "./pages/newFood/NewFood";
-import AddBook from "./pages/addFood/AddFood";
+import NewFood from "./pages/newFood/NewFood";
+import AddFood from "./pages/addFood/AddFood";
 import About from "./pages/about/About";
 
 const App = () => {
@@ -20,10 +20,10 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/today-meal" element={<TodayMeal />} />
-        <Route path="/new-food" element={<NewBooks />} />
+        <Route path="/new-food" element={<NewFood />} />
         {/* <Route path="login" element={<Login />} />
         <Route path="admin" element={<RequireAuth><AdminNews /></RequireAuth>} /> */}
-        <Route path="/add-food" element={<AddBook />} />
+        <Route path="/add-food" element={<AddFood />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<About />} />
         <Route

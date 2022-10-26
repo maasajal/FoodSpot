@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
-import AddNewBook from "../../components/newFoodList/AddNewFood";
+import AddNewFood from "../../components/newFoodList/AddNewFood";
 
-const AddBook = () => {
-  const [books, setBooks] = useState([]);
-  const firebaseUrl =
-    "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/foods.json";
-  const addBookHandler = async (book) => {
-    console.log(book);
-    const response = await fetch(
-      { firebaseUrl },
+const firebaseApi = "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/food-items.json";
+
+const AddFood = () => {
+  const [food, setFood] = useState([]);
+  const addFoodHandler = async (food) => {
+    console.log(food);
+    const response = await fetch(firebaseApi,
       {
         method: "POST",
-        body: JSON.stringify(book),
+        body: JSON.stringify(food),
         headers: {
           "Content-Type": "application/json",
         },
@@ -21,36 +20,35 @@ const AddBook = () => {
     console.log(data);
   };
 
-  const fetchBooks = async () => {
-    const response = await fetch({ firebaseUrl });
+  const fetchFood = async () => {
+    const response = await fetch(firebaseApi);
     const data = await response.json();
 
-    const fetchedBook = [];
+    const fetchedFood = [];
 
     for (const key in data) {
-      fetchedBook.push({
-        id: key,
-        title: data[key].title,
-        author: data[key].author,
-        year: data[key].year,
-        isbn: data[key].isbn,
-        price: data[key].price,
+      fetchedFood.push({
+        idMeal: key,
+        strMeal: data[key].strMeal,
+        strCategory: data[key].strCategory,
+        strMealThumb: data[key].strMealThumb,
+        strIngredient: data[key].strIngredient,
       });
     }
-    setBooks(fetchedBook);
+    setFood(fetchedFood);
   };
 
   useEffect(() => {
-    fetchBooks();
-  }, [fetchBooks]);
+    fetchFood();
+  }, [fetchFood]);
 
   return (
     <>
       <section>
-        <AddNewBook onAddNewBook={addBookHandler} />
+        <AddNewFood onAddNewFood={addFoodHandler} />
       </section>
     </>
   );
 };
 
-export default AddBook;
+export default AddFood;

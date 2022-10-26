@@ -1,5 +1,9 @@
 .food {
   text-align: center;
-  background-color: beige;
+  background-color: #f7f7f7;
+  padding: 2rem;
+}
+.add-food{
+  background-color: #f7f7f7;
   padding: 2rem;
 }

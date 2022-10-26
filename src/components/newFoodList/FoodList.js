@@ -2,21 +2,19 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import "./FoodList.css";
 
-const BookList = (props) => {
-  const reversed = [...props.books].reverse();
+const FoodList = (props) => {
+  const reversed = [...props.newFood].reverse();
   return (
     <main>
-      <Row xs={1} md={2} lg={3} xxl={4} className="book">
-        {reversed.map((book) => (
+      <Row xs={1} md={2} lg={3} xxl={4} className="food">
+        {reversed.map((food) => (
           <Col>
             <Card>
-              <Card.Img variant="top" src={props.avatar} alt={props.name} />
+              <Card.Img variant="top" src={food.strMealThumb} alt={food.strMeal} />
               <Card.Body>
-                <Card.Title>Book Name: {book.title} </Card.Title>
-                <Card.Subtitle>Author: {book.author} </Card.Subtitle> <br />
-                <Card.Text>Published year: {book.year} </Card.Text>
-                <Card.Text>Isbn no: {book.isbn} </Card.Text>
-                <Card.Text>Price: € {book.price} </Card.Text>
+                <Card.Subtitle>{food.strCategory} </Card.Subtitle>
+                <Card.Title>{food.strMeal} </Card.Title>
+                <Card.Text>{food.strIngredient} </Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -25,4 +23,4 @@ const BookList = (props) => {
     </main>
   );
 };
-export default BookList;
+export default FoodList;

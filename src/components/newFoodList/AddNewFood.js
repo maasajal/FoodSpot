@@ -1,81 +1,68 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "./FoodList.css";
 
-const AddNewBook = (props) => {
-  const titleRef = useRef("");
-  const authorRef = useRef("");
-  const yearRef = useRef("");
-  const isbnRef = useRef("");
-  const priceRef = useRef("");
+const AddNewFood = (props) => {
+  const strMealRef = useRef("");
+  const strCategoryRef = useRef("");
+  const strMealThumbRef = useRef("");
+  const strIngredientRef = useRef("");
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const book = {
-      title: titleRef.current.value,
-      author: authorRef.current.value,
-      year: yearRef.current.value,
-      isbn: isbnRef.current.value,
-      price: priceRef.current.value,
+    const food = {
+      strMeal: strMealRef.current.value,
+      strCategory: strCategoryRef.current.value,
+      strMealThumb: strMealThumbRef.current.value,
+      strIngredient: strIngredientRef.current.value,
     };
 
-    props.onAddNewBook(book);
+    props.onAddNewFood(food);
 
-    titleRef.current.value = "";
-    authorRef.current.value = "";
-    yearRef.current.value = "";
-    isbnRef.current.value = "";
-    priceRef.current.value = "";
-    navigate('/new-book');
+    strMealRef.current.value = "";
+    strCategoryRef.current.value = "";
+    strMealThumbRef.current.value = "";
+    strIngredientRef.current.value = "";
+    navigate('/new-food');
   };
 
   return (
     <main>
-      <form onSubmit={submitHandler} className="add-place">
+      <form onSubmit={submitHandler} className="add-food">
         <div>
-          <label htmlFor="title">Book Name: </label>
+          <label htmlFor="title">Food Name: </label>
           <input
             id="title"
-            ref={titleRef}
-            placeholder="enter Book title"
+            ref={strMealRef}
+            placeholder="enter food title"
             required
           />
-        </div>{" "}
+        </div>
         <br />
         <div>
-          <label htmlFor="author">Author Name: </label>
+          <label htmlFor="category">Category: </label>
           <input
-            id="author"
-            ref={authorRef}
-            placeholder="enter Author name"
+            id="category"
+            ref={strCategoryRef}
+            placeholder="enter category"
             required
           />
         </div>{" "}
         <br />
         <div>
-          <label htmlFor="year">Publish year: </label>
+          <label htmlFor="img">Food image: </label>
           <input
-            id="year"
-            ref={yearRef}
-            placeholder="enter Publish year"
-            required
+            type="file"
+            id="img"
+            ref={strMealThumbRef}
           />
         </div>{" "}
         <br />
         <div>
-          <label htmlFor="isbn">Isbn: </label>
-          <input id="isbn" ref={isbnRef} placeholder="enter Isbn" required />
-        </div>{" "}
-        <br />
-        <div>
-          <label htmlFor="price">Book price: </label>
-          <input
-            id="price"
-            ref={priceRef}
-            placeholder="enter Book price"
-            required
-          />
+          <label htmlFor="ingredients">Ingredients: </label>
+          <textarea id="ingredients" ref={strIngredientRef} placeholder="enter ingredients" required />
         </div>{" "}
         <br />
         <button className="add-btn">
@@ -86,4 +73,4 @@ const AddNewBook = (props) => {
   );
 };
 
-export default AddNewBook;
+export default AddNewFood;
