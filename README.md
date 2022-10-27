@@ -1,6 +1,6 @@
 # Food Spot
 
-Food Spot for food lover in Tampere!, Search your favourite food items, randomly generate your meal, Find new food items
+Food Spot for Cook!, who has ambitious to be a chef, Search your favourite food items, randomly generate your meal, Find new food items, Add your new recipe to this new food items. Know about us and contact us for anything. 
 
 ## Available Scripts
 

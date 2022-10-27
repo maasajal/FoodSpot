@@ -91,7 +91,7 @@ const TodayMeal = () => {
       <Row>
         <Col>
           <button onClick={fetchRandomFood} className="random-meal-btn">
-            Lottery today Food
+            Lottery Meal
           </button>
           {isLoading ? (
             <section>
@@ -101,7 +101,7 @@ const TodayMeal = () => {
             <> {mealContent} </>
           )}
         </Col>
-        <Col>
+        {/* <Col>
           <button onClick={fetchRandomMeal} className="random-meal-btn">
             Lottery Meal
           </button>
@@ -112,7 +112,7 @@ const TodayMeal = () => {
           ) : (
             <section> {content} </section>
           )}
-        </Col>
+        </Col> */}
       </Row>
     </main>
   );

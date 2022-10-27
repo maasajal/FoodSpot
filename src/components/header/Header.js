@@ -20,10 +20,10 @@ const Header = () => {
               <Nav.Link href="/today-meal">Today's meal</Nav.Link>
               <Nav.Link href="/new-food">New Food</Nav.Link>
               <Nav.Link
-                href="/add-food"
+                href="/add-recipe"
                 title="Admin login. user id and password required"
               >
-                Add Food
+                Add Recipe
               </Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
