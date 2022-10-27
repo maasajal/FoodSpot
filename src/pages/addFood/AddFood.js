@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
 import AddNewFood from "../../components/newFoodList/AddNewFood";
 
-const firebaseApi = "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/food-items.json";
+const firebaseApi =
+  "https://food-spot-tre-default-rtdb.europe-west1.firebasedatabase.app/food-items.json";
 
 const AddFood = () => {
   const [food, setFood] = useState([]);
   const addFoodHandler = async (food) => {
     console.log(food);
-    const response = await fetch(firebaseApi,
-      {
-        method: "POST",
-        body: JSON.stringify(food),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await fetch(firebaseApi, {
+      method: "POST",
+      body: JSON.stringify(food),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const data = await response.json();
     console.log(data);
   };
