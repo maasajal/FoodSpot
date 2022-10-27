@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import "./TodayMeal.css";
 
 import RandomMeal from "../../components/todayMeal/RandomMeal";
@@ -90,9 +90,9 @@ const TodayMeal = () => {
       <br />
       <Row>
         <Col>
-          <button onClick={fetchRandomFood} className="random-meal-btn">
+          <Button onClick={fetchRandomFood} className="random-meal-btn">
             Lottery Meal
-          </button>
+          </Button>
           {isLoading ? (
             <section>
               <p>Loading...</p>

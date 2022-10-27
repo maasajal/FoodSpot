@@ -5,11 +5,9 @@
 }
 .random-meal-btn {
   padding: 1rem 1.5rem;
-  border-radius: 1rem 0 1rem 0;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #230052;
-  color: white;
+  box-shadow: 2px 2px 5px rgb(95, 88, 68);
 }
 .today-meal section {
   margin: 1rem;

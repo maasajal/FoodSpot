@@ -1,9 +1,15 @@
+.contact-title {
+  text-align: center;
+}
+.contactForm {
+  background-color: #f7f7f7;
+  padding: 2rem;
+}
 .send-btn {
-	border-radius: 5px;
-    padding: 10px 15px;
-	margin-left: 5px;
-	cursor: pointer;
-	background-color: #f3a73d;
-	box-shadow: 2px 2px 5px rgb(95, 88, 68);
-	border: none;
-  }
+  padding: .5rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgb(95, 88, 68);
+  border: none;
+}

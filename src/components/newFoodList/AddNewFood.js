@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Col, Row, Form, Button } from "react-bootstrap";
 import "./FoodList.css";
 
 const AddNewFood = (props) => {
@@ -25,50 +26,58 @@ const AddNewFood = (props) => {
     strCategoryRef.current.value = "";
     strMealThumbRef.current.value = "";
     strIngredientRef.current.value = "";
-    navigate('/new-food');
+    navigate("/new-food");
   };
 
   return (
     <main>
-      <form onSubmit={submitHandler} className="add-food">
-        <div>
-          <label htmlFor="title">Food Name: </label>
-          <input
-            id="title"
-            ref={strMealRef}
-            placeholder="enter food title"
-            required
-          />
-        </div>
-        <br />
-        <div>
-          <label htmlFor="category">Category: </label>
-          <input
-            id="category"
-            ref={strCategoryRef}
-            placeholder="enter category"
-            required
-          />
-        </div>{" "}
-        <br />
-        <div>
-          <label htmlFor="img">Food image: </label>
-          <input
-            type="file"
-            id="img"
-            ref={strMealThumbRef}
-          />
-        </div>{" "}
-        <br />
-        <div>
-          <label htmlFor="ingredients">Ingredients: </label>
-          <textarea id="ingredients" ref={strIngredientRef} placeholder="enter ingredients" required />
-        </div>{" "}
-        <br />
-        <button className="add-btn">
-          Submit
-        </button>
-      </form>
+      <div className="add-recipe">
+        <Form onSubmit={submitHandler}>
+          <Row>
+            <Col sm={12} lg={12}>
+              <Form.Group className="mb-3" controlId="formGridName">
+                <Form.Label>Recipe name: </Form.Label>
+                <Form.Control
+                  type="text"
+                  ref={strMealRef}
+                  placeholder="Enter food title"
+                  required
+                />
+              </Form.Group>
+            </Col>
+            <Col sm={12} lg={12}>
+              <Form.Group className="mb-3" controlId="formGridCategory">
+                <Form.Label>Recipe category: </Form.Label>
+                <Form.Control
+                  type="text"
+                  ref={strCategoryRef}
+                  placeholder="Enter food category"
+                  required
+                />
+              </Form.Group>
+            </Col>
+            <Col sm={12} lg={12}>
+              <Form.Group className="mb-3" controlId="formGridThumb">
+                <Form.Label>Meal photo: </Form.Label>
+                <Form.Control type="file" ref={strMealThumbRef} />
+              </Form.Group>
+            </Col>
+          </Row>
+          <Form.Group className="mb-3" controlId="formGridIngredient">
+                <Form.Label>Recipe ingredients: </Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={5}
+              ref={strIngredientRef}
+              placeholder="Enter food ingredients"
+              required
+            />
+          </Form.Group>
+          <Button type="submit" className="submit-btn">
+            Submit
+          </Button>
+        </Form>
+      </div>
     </main>
   );
 };
