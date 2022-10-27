@@ -1,4 +1,5 @@
 import React from "react";
+import '../pages/home/Home.css'
 
 const SearchBar = ({
     handleSubmit,
@@ -7,7 +8,7 @@ const SearchBar = ({
     setQuery
 }) => {
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form">
             <input 
                 value={query}
                 className="form-control"

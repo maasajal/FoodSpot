@@ -12,6 +12,7 @@ import TodayMeal from "./pages/today'sMeal/TodayMeal";
 import NewFood from "./pages/newFood/NewFood";
 import AddFood from "./pages/addFood/AddFood";
 import About from "./pages/about/About";
+import Contact from './pages/contact/Contact'
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="admin" element={<RequireAuth><AdminNews /></RequireAuth>} /> */}
         <Route path="/add-recipe" element={<AddFood />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="*"
           element={

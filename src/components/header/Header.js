@@ -8,7 +8,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="/">
             {/* <img src="logo.png" alt="Book Circle logo" /> */}
-            <strong>Food Spot</strong>
+            <strong>Food <span className="spot-design">Spot</span></strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse

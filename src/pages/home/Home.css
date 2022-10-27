@@ -9,34 +9,36 @@
 	padding: 30px;
 	border-radius: 20px;
   }
-  form {
+  .form {
 	display: flex;
 	width: 100%;
 	justify-content: center;
+	margin: 35px 0;
+	
   }
   
-  input {
-	border: 1px solid #f7f7f7;
-	padding: 10px;
-	font-size: 16px;
-  
-  }
   input:focus {
 	outline: none;
   }
   
   .form-control {
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-radius: 5px;
 	width: 400px;
+	border: 1px solid #f7f7f7;
+	padding: 10px;
+	font-size: 16px;
+	box-shadow: 2px 2px 5px rgb(95, 88, 68);
   }
   
   .btn {
-	border-bottom-right-radius: 10px;
-	border-top-right-radius: 10px;
+	border-radius: 5px;
+	margin-left: 5px;
 	cursor: pointer;
-  
+	background-color: #f3a73d;
+	box-shadow: 2px 2px 5px rgb(95, 88, 68);
+	border: none;
   }
+  
   
   .recipes {
 	display: flex;
@@ -61,17 +63,18 @@
   .card-body {
 	padding: 10px;
 	text-align: center;
+	
   }
   
   .category {
 	color: #a1a1a1;
   }
   
-  .instructions {
-	background-color: #FFBA5A;
+  .guide {
+	background-color: #f3a73d;
 	color: inherit;
-	padding: 10px;
-	border-radius: 10px;
+	padding: 5px;
+	border-radius: 5px;
 	text-decoration: none;
   }
   

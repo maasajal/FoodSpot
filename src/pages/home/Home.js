@@ -4,6 +4,7 @@ import SearchBar from "../../components/SearchBar";
 import RecipeCard from "../../components/RecipeCard";
 const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
+
 function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
@@ -29,8 +30,8 @@ function Home() {
   };
 
   return (
+    
     <main className="home-page">
-      <h2>Our Food Recipes</h2>
       <SearchBar
         isLoading={isLoading}
         query={query}

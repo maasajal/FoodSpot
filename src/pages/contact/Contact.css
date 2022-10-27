@@ -1,0 +1,9 @@
+.send-btn {
+	border-radius: 5px;
+    padding: 10px 15px;
+	margin-left: 5px;
+	cursor: pointer;
+	background-color: #f3a73d;
+	box-shadow: 2px 2px 5px rgb(95, 88, 68);
+	border: none;
+  }
