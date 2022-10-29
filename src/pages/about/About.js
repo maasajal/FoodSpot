@@ -8,7 +8,6 @@ const About = () => {
       <section className="about">
         <Row className="container">
           <Col xs={12} md={6} className="section-title">
-            <h2>About</h2>
             <div className="about-img">
               <img src="about-img.jpg" alt="About page" />
             </div>
@@ -16,7 +15,7 @@ const About = () => {
 
           <Col xs={12} md={6} className="about-content grid">
             <div className="about-text">
-              <h2 className="about-title fs-26 ls-1">About Food Spot</h2>
+              <h2 className="about-title fs-26 ls-1">About Food <span className="spot-design">Spot</span> </h2>
               <p className="fs-17">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Accusamus dignissimos consequuntur vero commodi provident

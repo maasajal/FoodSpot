@@ -9,6 +9,14 @@
 	padding: 30px;
 	border-radius: 20px;
   }
+  .home-title{
+	background-color: #e7e7e7;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	text-align: center;
+  }
+  
   .form {
 	display: flex;
 	width: 100%;
@@ -21,7 +29,7 @@
 	outline: none;
   }
   
-  .form-control {
+  .search-control {
 	border-radius: 5px;
 	width: 400px;
 	border: 1px solid #f7f7f7;
@@ -73,7 +81,7 @@
   .guide {
 	background-color: #f3a73d;
 	color: inherit;
-	padding: 5px;
+	padding: 8px 10px;
 	border-radius: 5px;
 	text-decoration: none;
   }

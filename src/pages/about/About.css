@@ -1,5 +1,9 @@
 .about {
   padding: 3rem 0;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
 .about-content {
   gap: 4rem;
@@ -9,10 +13,14 @@
 }
 .about-img img {
   max-width: 520px;
+  border-radius: 10px;
 }
 .about-text p {
   margin: 1.8rem 0;
   opacity: 0.8;
+}
+.spot-design{
+  color: #ffa629;
 }
 
 @media screen and (min-width: 800px) {

@@ -11,7 +11,7 @@ const SearchBar = ({
         <form onSubmit={handleSubmit} className="form">
             <input 
                 value={query}
-                className="form-control"
+                className="search-control"
                 placeholder="Search Recipe"
                 name="query"
                 disabled={isLoading}

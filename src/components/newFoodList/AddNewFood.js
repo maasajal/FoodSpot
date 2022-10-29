@@ -31,7 +31,7 @@ const AddNewFood = (props) => {
 
   return (
     <main>
-      <div className="add-recipe">
+      <div className="add-recipe d-flex justify-content-center">
         <Form onSubmit={submitHandler}>
           <Row>
             <Col sm={12} lg={12}>

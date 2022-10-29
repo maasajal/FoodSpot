@@ -44,6 +44,10 @@ const AddFood = () => {
   return (
     <>
       <section>
+        <div>
+          <h1 className="text-center">Add Recipe</h1>
+          <p className="text-center my-3">Feel free to send us of your recipes here...</p>
+        </div>
         <AddNewFood onAddNewFood={addFoodHandler} />
       </section>
     </>

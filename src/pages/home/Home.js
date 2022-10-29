@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import SearchBar from "../../components/SearchBar";
 import RecipeCard from "../../components/RecipeCard";
+import { GiChickenOven } from 'react-icons/gi';
+import { GiKnifeFork } from 'react-icons/gi';
 const searchApi = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
 
@@ -32,12 +34,16 @@ function Home() {
   return (
     
     <main className="home-page">
-      <SearchBar
-        isLoading={isLoading}
-        query={query}
-        setQuery={setQuery}
-        handleSubmit={handleSubmit}
-      />
+      <div className="home-title">
+        <h2>Let's Have A Recipe Tour <GiChickenOven/> <GiKnifeFork/></h2>
+        <SearchBar
+          isLoading={isLoading}
+          query={query}
+          setQuery={setQuery}
+          handleSubmit={handleSubmit}
+        />
+      </div>
+      
       <div className="recipes">
         {recipes
           ? recipes.map((recipe) => (

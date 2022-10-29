@@ -86,7 +86,7 @@ const TodayMeal = () => {
   return (
     <main className="today-meal">
       <h1>😋 Are you hungry?</h1>
-      <h2>What will your meal today?</h2> <br />
+      <h2>Let's see what meal for you...</h2> <br />
       <br />
       <Row>
         <Col>

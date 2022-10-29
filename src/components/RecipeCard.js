@@ -1,5 +1,6 @@
-import React from "react";
 import '../pages/home/Home.css'
+import Modal from './modal/Modal'
+
 
 const RecipeCard = ({ recipe }) => {
     const {
@@ -9,11 +10,8 @@ const RecipeCard = ({ recipe }) => {
         strMealThumb,
         
     } = recipe;
-    // const getData = (strMeal) => {
-    //     let tempData = [strMeal]
-    //     console.log(tempData)
-
-    // }
+   
+    
     return (
         <div className="card">
             <img
@@ -25,8 +23,10 @@ const RecipeCard = ({ recipe }) => {
                 <span className="category">{strCategory}</span>
                 <h3>{strMeal}</h3>
                 <a className="guide" href={"https://www.themealdb.com/meal/" + idMeal} target="_blank">Guide</a>   
-                {/* <button onClick={getData}>Recipe</button> */}
+                
+
             </div>
+            
         </div>
     )
 };

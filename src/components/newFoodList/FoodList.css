@@ -3,6 +3,7 @@
 }
 .add-recipe {
   background-color: #f7f7f7;
+  border-radius: 20px;
   padding: 2rem;
 }
 .submit-btn {
