@@ -1,0 +1,15 @@
+.login {
+  background-color: #eccf77;
+  width: 50%;
+  padding: 2rem;
+}
+/* Login page */
+.login input,
+.login button {
+  padding: 10px;
+}
+
+.login a {
+  text-decoration: none;
+  float: right;
+}

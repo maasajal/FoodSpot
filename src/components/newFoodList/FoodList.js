@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import RecipeModal from "../modal/RacipeModal";
 import "./FoodList.css";
 
 const FoodList = (props) => {
@@ -13,8 +14,9 @@ const FoodList = (props) => {
               <Card.Img variant="top" src={food.strMealThumb} alt={food.strMeal} />
               <Card.Body>
                 <Card.Subtitle>{food.strCategory} </Card.Subtitle>
-                <Card.Title>{food.strMeal} </Card.Title>
+                <Card.Title> <h2>{food.strMeal}</h2> </Card.Title>
                 <Card.Text>{food.strIngredient} </Card.Text>
+                <RecipeModal />
               </Card.Body>
             </Card>
           </Col>

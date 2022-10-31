@@ -45,13 +45,15 @@ const Contact = () => {
 
   return (
     <main className="contact">
-      <section className="contact-title">
-        <h2>Contact Us</h2>
+      <section className="contact-title page-title">
+        <h1>Contact Us</h1>
         <p>
           If you want to discuss about food recipes, fill up the form and send
           us!
         </p>
       </section>
+      <br />
+      <br />
       <section>
         <ContactForm onContact={contactHandler} />
       </section>

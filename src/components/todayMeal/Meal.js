@@ -1,5 +1,6 @@
 import "./Meal.css";
 import { Card } from "react-bootstrap";
+import RecipeModal from "../modal/RacipeModal";
 
 const Meal = (props) => {
   return (
@@ -9,6 +10,7 @@ const Meal = (props) => {
         <Card.Body>
           <Card.Subtitle>{props.strCategory} </Card.Subtitle>
           <Card.Title>{props.strMeal} </Card.Title>
+          <RecipeModal />
         </Card.Body>
       </Card>
     </main>

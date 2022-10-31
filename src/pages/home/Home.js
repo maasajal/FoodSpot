@@ -32,7 +32,6 @@ function Home() {
   };
 
   return (
-    
     <main className="home-page">
       <div className="home-title">
         <h2>Let's Have A Recipe Tour <GiChickenOven/> <GiKnifeFork/></h2>
@@ -43,7 +42,7 @@ function Home() {
           handleSubmit={handleSubmit}
         />
       </div>
-      
+
       <div className="recipes">
         {recipes
           ? recipes.map((recipe) => (

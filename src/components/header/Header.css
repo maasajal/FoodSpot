@@ -14,20 +14,9 @@
   padding: 20px !important;
   text-transform: uppercase;
 }
-
-/* Login page */
-.login form {
-  border: 1px solid blue;
-}
-.login input,
-.login button {
-  margin: 20px;
-  padding: 10px;
-}
-
 .navbarBottomMargin {
   margin-bottom: 7rem;
 }
-.spot-design{
+.spot-design {
   color: #ffa629;
 }

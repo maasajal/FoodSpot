@@ -33,8 +33,8 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/today-meal" element={<TodayMeal />} />
           <Route path="/new-food" element={<NewFood />} />
-          <Route path="/login" element={<Login />} />
-          {/* <Route path="/login" element={<LogIn />} /> */}
+          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
           {/* <Route path="/add-recipe" element={<RequireAuth><AddFood /></RequireAuth>} /> */}
 

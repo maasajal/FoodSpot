@@ -42,15 +42,13 @@ const AddFood = () => {
   }, [fetchFood]);
 
   return (
-    <>
-      <section>
-        <div>
-          <h1 className="text-center">Add Recipe</h1>
-          <p className="text-center my-3">Feel free to send us of your recipes here...</p>
-        </div>
+    <main>
+      <div className="page-title">
+        <h1>Add Recipe</h1>
+        <p className="my-3">Feel free to send us of your recipes here...</p>
         <AddNewFood onAddNewFood={addFoodHandler} />
-      </section>
-    </>
+      </div>
+    </main>
   );
 };
 
